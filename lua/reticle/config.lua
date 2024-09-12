@@ -39,7 +39,7 @@ local defaults = {
 
 M.option_check = function(dict1, dict2, path)
     path = path or 'reticle.opts'
-    if vim.slist(dict1) and vim.islist(dict2) then
+    if vim.islist(dict1) and vim.islist(dict2) then
         return
     end
     if not vim.tbl_isempty(dict2) and vim.tbl_islist(dict2) then
